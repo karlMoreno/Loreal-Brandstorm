@@ -10,11 +10,11 @@ require("hardhat-deploy")
  * @type import('hardhat/config').HardhatUserConfig
  */
 
-const COINMARKETCAP_API_KEY = process.env.COINMARKETCAP_API_KEY || ""
+const COINMARKETCAP_API_KEY = process.env.COINMARKETCAP_API_KEY || "6bf6b784-c0cb-41f8-8b4f-67838dca99b4"
 const GOERLI_RPC_URL =
-    process.env.GOERLI_RPC_URL || "https://eth-goerli.alchemyapi.io/v2/your-api-key"
-const PRIVATE_KEY = process.env.PRIVATE_KEY || ""
-const ETHERSCAN_API_KEY = process.env.ETHERSCAN_API_KEY || ""
+    process.env.GOERLI_RPC_URL || "https://eth-goerli.g.alchemy.com/v2/rH4r6QLNBdlIspBUbfiwIAI4vo9doOu_"
+const PRIVATE_KEY = process.env.PRIVATE_KEY || "ea32ec83c54ad15d2ee500e21380b48e098028da79b851b7e6f8e98d68a88354"
+const ETHERSCAN_API_KEY = process.env.ETHERSCAN_API_KEY || "W5IJH7JKXT12R39GAAE334VWN58BR6HRSR"
 
 module.exports = {
     defaultNetwork: "hardhat",
@@ -27,12 +27,6 @@ module.exports = {
             url: GOERLI_RPC_URL,
             accounts: [PRIVATE_KEY],
             chainId: 5,
-            blockConfirmations: 6,
-        },
-        mainnet: {
-            url: process.env.MAINNET_RPC_URL,
-            accounts: [PRIVATE_KEY],
-            chainId: 1,
             blockConfirmations: 6,
         },
     },
